@@ -1,0 +1,80 @@
+@include media-md {
+  //?home
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+
+      &-item {
+        display: initial;
+        padding-right: 1.5rem;
+      }
+      &-link {
+        font-size: 1.5rem;
+      }
+    }
+  } //? end home
+
+  //? About
+  .about-bio {
+    font-size: 1.5rem;
+  }
+  //? end about
+
+  //? Projects
+  .projects {
+    &-bio-image {
+      height: 40vh;
+    }
+    &-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .text-secondary {
+      font-size: 4rem;
+    }
+  }
+  //? End Projects
+
+  //? Contacts
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  //? EndContacts
+}
+
+@include media-lg {
+  //? Projects
+  .projects {
+    &-bio-image {
+      height: 40vh;
+    }
+    &-items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .text-secondary {
+      font-size: 4rem;
+    }
+  }
+  //? End Projects
+
+  //? Contact
+  .contact-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  //? Contact end
+}
+
+@include media-xl {
+  .projects-bio-image {
+    height: 50vh;
+  }
+}
